@@ -13,66 +13,60 @@
     <div class="container">
       <div class="col">
         <div class="panel-heading">
-                 <div class="panel-title text-center">
-                    <h1 class="title">Sign Up</h1>
-                    <hr/>
-                  </div>
-              </div> 
+          <div class="panel-title text-center">
+            <h1 class="title">Sign Up</h1>
+            <hr/>
+          </div>
+        </div> 
         <div>
           <form method="post" action="#">
             
             <div class="form-group">
               <label for="name">Your Name</label>
                 <div class="input-group">
-                  <span class="glyphicon glyphicon-user" ></span>
-                  <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                  <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"></input>
                 </div>
             </div>
 
             <div class="form-group">
               <label for="email" >Your Email</label>
-              
                 <div class="input-group">
-                  <span class="input-group-addon"></span>
                   <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
-                </div>
-              
+                </div>              
             </div>
-
-            
 
             <div class="form-group">
               <label for="password">Password</label>
-              
                 <div class="input-group">
-                  <span class="input-group-addon"></span>
                   <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
-                </div>
-              
+                </div>     
             </div>
-
-            <div class="form-group">
-              <label for="confirm">Confirm Password</label>
-              
-                <div class="input-group">
-                  <span class="input-group-addon"></span>
-                  <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-                </div>
-              
+            <div>
+            <h3>Modifications</h3>
+              <label> Select all that Apply:</label>
             </div>
+           
+        <label class="btn btn-info">
+          <input type="checkbox" autocomplete="off"> Knee
+        </label>
+        <label class="btn btn-info">
+          <input type="checkbox" autocomplete="off"> Back
+        </label>
+        <label class="btn btn-info">
+          <input type="checkbox" autocomplete="off"> Wrist
+        </label>
 
-            <div class="form-group ">
-              <button type="button" class="btn btn-primary btn-lg btn-block login-button"  onclick="location.href = '../'">Sign Up</button>
+
+            <div>
+              <button type="button" class="btn btn-primary btn-lg btn-block login-button"  onclick="location.href = 'index.html'">Sign Up</button>
             </div>
             <label>Already have an account?</label>
-            <div class="login-register">
-                    <a href="/Login">Login</a>
-                </div>
+            <div>
+                    <a href="login.html">Login</a>
+            </div>
           </form>
         </div>
       </div>
     </div>
-
-    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
   </body>
 </html>
