@@ -19,32 +19,32 @@
           </div>
         </div> 
         <div>
-          <form method="post" action="#">
+          <form method="post" action="/login">
             
             <div class="form-group">
               <label for="name">Your Name</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"></input>
+                  <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" required></input>
                 </div>
             </div>
             <div class="form-group">
               <label for="age">Age</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" name="password" id="age"  placeholder="Age"/>
+                  <input type="text" class="form-control" name="password" id="age"  placeholder="Age"  required/>
                 </div>     
             </div>
 
             <div class="form-group">
               <label for="email" >Your Email</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                  <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email" required/>
                 </div>              
             </div>
 
             <div class="form-group">
               <label for="password">Password</label>
                 <div class="input-group">
-                  <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                  <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" required/>
                 </div>     
             </div>
             
@@ -65,7 +65,7 @@
 
 
             <div>
-              <button type="button" class="btn btn-primary btn-lg btn-block login-button"  onclick="location.href = 'index.html'">Sign Up</button>
+              <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Sign Up">
             </div>
             <label>Already have an account?</label>
             <div>
