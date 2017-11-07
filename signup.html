@@ -19,28 +19,35 @@
           </div>
         </div> 
         <div>
-          <form method="post" action="#">
+          <form method="get" action="/">
             
             <div class="form-group">
-              <label for="name">Your Name</label>
+              <label for="name">Name</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"></input>
+                  <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" required></input>
                 </div>
+            </div>
+            <div class="form-group">
+              <label for="age">Age</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" name="password" id="age"  placeholder="Enter your Age" required/>
+                </div>     
             </div>
 
             <div class="form-group">
-              <label for="email" >Your Email</label>
+              <label for="email" >Email</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                  <input type="email" class="form-control" name="email" id="email"  placeholder="Enter your Email" required/>
                 </div>              
             </div>
 
             <div class="form-group">
               <label for="password">Password</label>
                 <div class="input-group">
-                  <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                  <input type="password" class="form-control" name="password" id="password"  placeholder="Create a Password" required/>
                 </div>     
             </div>
+            
             <div>
             <h3>Modifications</h3>
               <label> Select all that Apply:</label>
@@ -58,7 +65,7 @@
 
 
             <div>
-              <button type="button" class="btn btn-primary btn-lg btn-block login-button"  onclick="location.href = 'index.html'">Sign Up</button>
+              <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Sign Up">
             </div>
             <label>Already have an account?</label>
             <div>
