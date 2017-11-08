@@ -49,12 +49,10 @@
   <div class="row">
     
     <div class="col-sm-3">
-        <a href="./info.html">
           <img src="./img/walk.jpg" class="img-rounded" alt="Lights" style="width:75%">
           <div class=" btn btn-info" data-toggle="modal" data-target="#exerciseInfoModal" data-exercise="Walk">
             <p>Info</p>
           </div>
-        </a>
     </div>
     
     <div class="col-sm-6">
@@ -64,7 +62,7 @@
     
     <div class="col-sm-3">
       <p text-align="center">
-        <br />
+        <br/>
         <button type="button" id="walk" onclick="timer()" class="btn btn-success btn-circle btn-lg">
           <h2 id="timeCount">Start Now<br /></h2></button>
       </p>
@@ -80,12 +78,10 @@
   <div class="row">
     
     <div class="col-sm-3">
-        <a href="./info.html">
           <img src="./img/walk.jpg" class="img-rounded" alt="Lights" style="width:75%">
           <div class=" btn btn-info" data-toggle="modal" data-target="#exerciseInfoModal" data-exercise="squat">
             <p>Info</p>
           </div>
-        </a>
     </div>
     
     <div class="col-sm-6">
@@ -161,7 +157,6 @@ function timer() {
     document.getElementById("timeCount").textContent = timeleft + " s";
     if(timeleft <= 0)
       clearInterval(downloadTimer);
-      document.getElementById("timeCount").textContent ="DONE!";
     },1000);
 }
 function counter() {
@@ -174,7 +169,6 @@ function counter() {
 
     if(timeleft <= 0)
       clearInterval(downloadTimer);
-      document.getElementById("numCount").textContent = "DONE!";
     },1000);
 }
 </script>
