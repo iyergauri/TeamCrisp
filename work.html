@@ -156,6 +156,11 @@ function timer() {
     var seconds = timeleft - minutes*60;
     var downloadTimer = setInterval(function(){
     timeleft--;
+    minutes = Math.floor(timeleft/60);
+    seconds = timeleft - minutes*60;
+    if(seconds < 10)
+      seconds = "0"+seconds;
+    document.getElementById("numCount").textContent = timeleft + " left or " + minutes + ":" + seconds;
     document.getElementById("timeCount").textContent = minutes + ":" + seconds + "left";
     if(timeleft <= 0){
       clearInterval(downloadTimer);
