@@ -150,7 +150,7 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
 
 function timer() {
     $("#walk").attr("disabled", true);
-    document.getElementById("timeCount").innerHTML = "600 s";
+    document.getElementById("timeCount").innerHTML = "10:00 left";
     var timeleft = 600;
     var minutes = Math.floor(timeleft/60);
     var seconds = timeleft - minutes*60;
@@ -160,8 +160,7 @@ function timer() {
     seconds = timeleft - minutes*60;
     if(seconds < 10)
       seconds = "0"+seconds;
-    document.getElementById("numCount").textContent = timeleft + " left or " + minutes + ":" + seconds;
-    document.getElementById("timeCount").textContent = minutes + ":" + seconds + "left";
+    document.getElementById("timeCount").textContent = minutes + ":" + seconds + " left";
     if(timeleft <= 0){
       clearInterval(downloadTimer);
       document.getElementById("numCount").textContent = "DONE!";
