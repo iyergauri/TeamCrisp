@@ -41,6 +41,9 @@
 <!-- HOME PAGE BANNER -->
 <div class="jumbotron text-center">
   <h1 class="display-3">Today's Workout</h1>
+  <p class="lead">
+    <a class="btn btn-success btn-lg" href="./index.html" role="button">Return Home</a>
+  </p>
 </div>
 
 <!-- exercise -->
@@ -63,7 +66,7 @@
     <div class="col-sm-3">
       <p text-align="center">
         <br/>
-        <button type="button" id="walk" onclick="timer()" class="btn btn-success btn-circle btn-lg">
+        <button type="button" id="walk" onclick="timer()" class="btn btn-primary btn-circle btn-lg">
           <h2 id="timeCount">Start Now<br /></h2></button>
       </p>
     </div>
@@ -92,7 +95,7 @@
     <div class="col-sm-3">
       <p class="lead">
         <br />
-        <button type="button" id="squat" onclick="counter()" class="btn btn-success btn-circle btn-lg">
+        <button type="button" id="squat" onclick="counter()" class="btn btn-primary btn-circle btn-lg">
           <h2 id="numCount">Start Now<br /></h2></button>
       </p>
     </div>
@@ -126,7 +129,9 @@
     </div>
   </div>
 </div>
-
+<div>
+  <button class="btn btn-primary btn-lg btn-block login-button" href="./finish.html" > Finish Workout </button>
+</div>
 <script type="text/javascript">
 //add this into a js file later
 $('#exerciseInfoModal').on('show.bs.modal', function (event) {
