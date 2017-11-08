@@ -138,9 +138,9 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
  
   modal.find('.modal-title').text(exercise);
   if(exercise == "Squat"){
-  modal.find('#modal-text').text("Stand with your arms straight out and with your feet at about shoulder width apart."+
-                    "Keeping your back straight, bend your knees as if you were sitting.\n" +
-                    "Rise back up to a standing position.\n" +
+  modal.find('#modal-text').text("Stand with your arms straight out and with your feet at about shoulder width apart. "+
+                    "Keeping your back straight, bend your knees as if you were sitting. " +
+                    "Rise back up to a standing position. " +
                     "Repeat this 10 times.");
   }
   if(exercise == "Walk"){
@@ -152,11 +152,15 @@ function timer() {
     $("#walk").attr("disabled", true);
     document.getElementById("timeCount").innerHTML = "600 s";
     var timeleft = 600;
+    var minutes = Math.floor(timeleft/60);
+    var seconds = timeleft - minutes*60;
     var downloadTimer = setInterval(function(){
     timeleft--;
-    document.getElementById("timeCount").textContent = timeleft + " s";
-    if(timeleft <= 0)
+    document.getElementById("timeCount").textContent = minutes + ":" + seconds + "left";
+    if(timeleft <= 0){
       clearInterval(downloadTimer);
+      document.getElementById("numCount").textContent = "DONE!";
+    }
     },1000);
 }
 function counter() {
@@ -167,9 +171,10 @@ function counter() {
     timeleft--;
     document.getElementById("numCount").textContent = timeleft + " left";
 
-    if(timeleft <= 0)
+    if(timeleft <= 0){
       clearInterval(downloadTimer);
       document.getElementById("numCount").textContent = "DONE!";
+    }
     },1000);
 }
 </script>
