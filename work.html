@@ -96,7 +96,7 @@
       <p class="lead">
         <br />
         <button type="button" id="squat" onclick="counter()" class="btn btn-primary btn-circle btn-lg">
-          <h2 id="numCount">Start Now<br /></h2></button>
+          <h2 id="numCount">Start Now<br/></h2></button>
       </p>
     </div>
     
@@ -185,6 +185,17 @@ function counter() {
       clearInterval(downloadTimer);
       document.getElementById("numCount").textContent = "DONE!";
     }
+    },2000);
+
+    var switchImg = setInterval(function(){
+    
+    
+      if(imgNum % 2 == 0)
+      document.getElementById("squat-img").src = "./img/Squat1.png";
+      else 
+        document.getElementById("squat-img").src = "./img/Squat2.png";
+      
+      imgNum++;
     },1000);
 }
 </script>
