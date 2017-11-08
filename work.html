@@ -79,7 +79,7 @@
     
     <div class="col-sm-3">
           <img src="./img/walk.jpg" class="img-rounded" alt="Lights" style="width:75%">
-          <div class=" btn btn-info" data-toggle="modal" data-target="#exerciseInfoModal" data-exercise="squat">
+          <div class=" btn btn-info" data-toggle="modal" data-target="#exerciseInfoModal" data-exercise="Squat">
             <p>Info</p>
           </div>
     </div>
@@ -169,6 +169,7 @@ function counter() {
 
     if(timeleft <= 0)
       clearInterval(downloadTimer);
+      document.getElementById("numCount").textContent = "DONE!";
     },1000);
 }
 </script>
