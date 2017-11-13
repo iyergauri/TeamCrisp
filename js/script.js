@@ -81,7 +81,7 @@ var email = document.getElementById("email").value;
 var password = document.getElementById("password").value;
 
 if(localStorage.getItem(email) == null){
-  alert("There is no account using this eamil address");
+  alert("There is no account using this email address");
   return;
 }
 var info = JSON.parse(localStorage.getItem(email));
