@@ -27,7 +27,7 @@
             <div class="form-group">
               <label for="age">Age</label>
                 <div class="input-group">
-                  <input type="number" class="form-control" name="password" id="age"  placeholder="Enter your Age" required/>
+                  <input type="number" class="form-control" name="age" id="age"  placeholder="Enter your Age" required/>
                 </div>     
             </div>
 
@@ -70,7 +70,8 @@
             </div>
           </form>
 
-          <script type="text/javascript">function createAccount() {
+          <script type="text/javascript">
+          function createAccount() {
   var email = document.getElementById("email").value;
   var name = document.getElementById("name").value;
   var password = document.getElementById("password").value;
@@ -80,11 +81,9 @@
   var wrist = document.getElementById("wrist").checked;
 
 
-  var jsonObj = JSON.stringify({'password': password, "name": name, "age":age, 'knee':knee, 'back':back,'wrist':wrist});
-  localStorage.setItem(email, jsonObj);
-  location = "./";
 
-}</script>
+}
+</script>
         </div>
       </div>
     </div>
