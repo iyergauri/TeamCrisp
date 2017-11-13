@@ -1,12 +1,12 @@
 
 //insecure but using just for fake info and testing
 //account 1
-var userData = {'password': 'pass', 'injuries':['knee']};
+var userData = {'password': 'pass', "name": "John Smith", "age":"50", 'knee':'true', 'back':'false','wrist':'false'};
 var curremail = "test@example.com";
 localStorage.setItem(curremail, JSON.stringify(userData));
 
 //account 2
-var userData = {'password': 'word', 'injuries':['back']};
+var userData = {'password': 'word', "name": "Jeff Lee", "age":"55",'knee':'false', 'back':'true','wrist':'false'};
 var curremail = "back@injury.com";
 localStorage.setItem(curremail, JSON.stringify(userData));
 
@@ -110,7 +110,7 @@ function createAccount() {
   var wrist = document.getElementById("wrist").checked;
 
 
-  var jsonObj = JSON.stringify({'password': password, "name": name, "age":age, 'knee':knee, 'back':back,'wrist':wrist});
+  var jsonObj = JSON.stringify({'password': password, "name": name, "age":age, 'knee':"" + knee, 'back': "" + back,'wrist': "" + wrist});
   localStorage.setItem(email, jsonObj);
   localStorage.setItem("currentUser", email);
   location = "./";
