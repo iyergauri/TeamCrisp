@@ -112,6 +112,7 @@ function createAccount() {
 
   var jsonObj = JSON.stringify({'password': password, "name": name, "age":age, 'knee':knee, 'back':back,'wrist':wrist});
   localStorage.setItem(email, jsonObj);
+  localStorage.setItem("currentUser", email);
   location = "./";
 
 }
