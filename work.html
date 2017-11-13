@@ -52,7 +52,7 @@
   <div class="row">
     
     <div class="col-sm-3">
-          <img src="./img/walk.jpg" class="img-rounded" alt="Lights" style="width:75%">
+          <img src="./img/Walk.png" class="img-rounded" alt="Lights" style="width:75%">
           <div class=" btn btn-info" data-toggle="modal" data-target="#exerciseInfoModal" data-exercise="Walk">
             <p>Info</p>
           </div>
@@ -135,6 +135,8 @@
 </div>
 <br>
 <script type="text/javascript">
+
+
 //add this into a js file later
 $('#exerciseInfoModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
@@ -180,18 +182,19 @@ function counter() {
     var timeleft = 10;
     var imgNum = 0;
     var downloadTimer = setInterval(function(){
-    timeleft--;
-    document.getElementById("numCount").textContent = timeleft + " left";
+      timeleft--;
+      document.getElementById("numCount").textContent = timeleft + " left";
 
-    if(timeleft <= 0){
-      clearInterval(downloadTimer);
-      document.getElementById("numCount").textContent = "DONE!";
-    }
+      if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("numCount").textContent = "DONE!";
+      }
     },2000);
 
     var switchImg = setInterval(function(){
-
-      if(imgNum % 2 == 0)
+      if(timeleft <= 0)
+        document.getElementById("squat-img").src = "./img/Squat1.png";
+      else if(imgNum % 2 == 0)
         document.getElementById("squat-img").src = "./img/Squat1.png";
       else 
         document.getElementById("squat-img").src = "./img/Squat2.png";
