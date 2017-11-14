@@ -105,12 +105,12 @@ function createAccount() {
   var name = document.getElementById("name").value;
   var password = document.getElementById("password").value;
   var age = document.getElementById("age").value;
-  var knee = document.getElementById("knee").checked;
-  var back = document.getElementById("back").checked;
-  var wrist = document.getElementById("wrist").checked;
+  var knee = document.getElementById("knee").checked.toString();
+  var back = document.getElementById("back").checked.toString();
+  var wrist = document.getElementById("wrist").checked.toString();
 
 
-  var jsonObj = JSON.stringify({'password': password, "name": name, "age":age, 'knee':"" + knee, 'back': "" + back,'wrist': "" + wrist});
+  var jsonObj = JSON.stringify({'password': password, "name": name, "age":age, 'knee':knee, 'back': back,'wrist': wrist});
   localStorage.setItem(email, jsonObj);
   localStorage.setItem("currentUser", email);
   location = "./";
