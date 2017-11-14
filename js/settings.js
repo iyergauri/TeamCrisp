@@ -1,15 +1,17 @@
 //checking boxes in account settings
+window.onload = function(){
 var email = localStorage.getItem('currentUser');
 var user = JSON.parse(localStorage.getItem(email));
 //hardcoded, add more if we add more possible modifications
 if(user.knee == "true") document.getElementById("knee").checked=true;
 if(user.back == "true") document.getElementById("back").checked=true;
 if(user.wrist == "true") document.getElementById("wrist").checked=true;
+}
 
 function editModification(){
 	if(localStorage.getItem(email) == null)
 		return;
-	
+
 	var name = user.name;
 	var password = user.password;
 	var age = user.age;
