@@ -1,6 +1,7 @@
 //checking boxes in account settings
+var email;
 window.onload = function(){
-var email = localStorage.getItem('currentUser');
+email = localStorage.getItem('currentUser');
 var user = JSON.parse(localStorage.getItem(email));
 //hardcoded, add more if we add more possible modifications
 if(user.knee == "true") document.getElementById("knee").checked=true;
