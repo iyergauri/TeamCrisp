@@ -10,7 +10,7 @@ var userData = {'password': 'word', "name": "Jeff Lee", "age":"55",'knee':'false
 var curremail = "back@injury.com";
 localStorage.setItem(curremail, JSON.stringify(userData));
 
-window.onload = function{
+
 $('#exerciseInfoModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var exercise = button.data('exercise') // Extract info from data-* attributes
@@ -29,7 +29,6 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
     modal.find('#modal-text').text("Walk at a brisk pace in an open area for 10 minutes");
   }
 })
-};
 
 function timer() {
     $("#walk").attr("disabled", true);
