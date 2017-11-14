@@ -11,7 +11,9 @@ if(user.wrist == "true") document.getElementById("wrist").checked=true;
 knee.onclick = editModification;
 back.onclick = editModification;
 wrist.onclick = editModification;
-
+document.getElementById("greeting").innerHTML = "Hello " + user.name + "!";
+document.getElementById("info-age").innerHTML =  "<strong>Age:</strong> " + user.age + " Years";
+document.getElementById("info-email").innerHTML = "<strong>Email:</strong> " + email;
 };
 
 

@@ -17,28 +17,37 @@
           </div>
         </div> 
         <div>
-          <form method="post" action="#">
+
+          <div class="text-center"><h2 id="greeting"></h2></div>
             <div>
-              <h3>Modifications</h3>
-              <label> Select all that Apply:</label>
+              <h3><strong>Current Modifications</strong></h3>
+             
+              <div>
+                <label class="btn btn-info">
+                  <input type="checkbox" id="knee" autocomplete="off"> Knee
+                </label>
+                <label class="btn btn-info">
+                  <input type="checkbox" id="back" autocomplete="off"> Back
+                </label>
+                <label class="btn btn-info">
+                  <input type="checkbox" id="wrist" autocomplete="off"> Wrist
+                </label>
+                <label> Change any modifications if needed</label>
+              </div>
             </div>
-           
-            <label class="btn btn-info">
-              <input type="checkbox" id="knee" autocomplete="off"> Knee
-            </label>
-            <label class="btn btn-info">
-              <input type="checkbox" id="back" autocomplete="off"> Back
-            </label>
-            <label class="btn btn-info">
-              <input type="checkbox" id="wrist" autocomplete="off"> Wrist
-            </label>
+
+            <div>
+              <p id="info-age"></p>
+            </div>
+            <div>
+              <p id="info-email"></p>
+            </div>
 
 
             <div>
-              <button type="button" class="btn btn-primary btn-lg btn-block login-button"  onclick="location.href = 'index.html'">Go Back</button>
               <button type="button" class="btn btn-success btn-lg btn-block login-button"  onclick="location.href = 'index.html'">Done Editing Settings</button>
             </div>
-          </form>
+          
         </div>
       </div>
     </div>
