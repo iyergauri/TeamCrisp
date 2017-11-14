@@ -6,7 +6,12 @@ var user = JSON.parse(localStorage.getItem(email));
 if(user.knee == "true") document.getElementById("knee").checked=true;
 if(user.back == "true") document.getElementById("back").checked=true;
 if(user.wrist == "true") document.getElementById("wrist").checked=true;
+knee.onclick = editModification;
+back.onclick = editModification;
+wrist.onclick = editModification;
+
 }
+
 
 function editModification(){
 	if(localStorage.getItem(email) == null)
