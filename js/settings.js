@@ -10,7 +10,7 @@ knee.onclick = editModification;
 back.onclick = editModification;
 wrist.onclick = editModification;
 
-}
+};
 
 
 function editModification(){
