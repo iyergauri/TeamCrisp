@@ -1,5 +1,6 @@
 //checking boxes in account settings
 var email;
+var user;
 window.onload = function(){
 email = localStorage.getItem('currentUser');
 var user = JSON.parse(localStorage.getItem(email));
