@@ -9,9 +9,11 @@
   <title>Team Crisp</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="import" href="components.html">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -38,7 +40,6 @@
 </nav>
 
 
-
 <!-- HOME PAGE BANNER -->
 <div class="jumbotron text-center">
   <h1 class="display-3">Home</h1>
@@ -60,7 +61,7 @@
      sources of help: 
         https://v4-alpha.getbootstrap.com/content/tables/
 -->
-<table class="table" align="center">
+<table id="calendar" class="table" align="center">
   <thead class="thead-default">
     <tr>
       <th>Sunday</th>
@@ -74,20 +75,20 @@
   </thead>
   <tbody>
     <tr>
-      <td>Yoga</td>
+      <td class="yoga">Yoga</td>
       <td>Walking</td>
-      <td>Yoga</td>
+      <td class="yoga">Yoga</td>
       <td>Walking</td>
-      <td>Yoga</td>
+      <td class="yoga">Yoga</td>
       <td>Walking</td>
       <td>No Workout Today!</td>
     </tr>
     <tr>
       <td></td>
-      <td>Squats</td>
+      <td class="squats">Squats</td>
       <td></td>
       <td></td>
-      <td>Squats</td>
+      <td class="squats">Squats</td>
       <td></td>
       <td></td>
     </tr>
