@@ -1,15 +1,18 @@
 
 //insecure but using just for fake info and testing
-//account 1
-var userData = {'password': 'pass', "name": "John Smith", "age":"50", 'knee':'true', 'back':'false','wrist':'false'};
-var curremail = "test@example.com";
-localStorage.setItem(curremail, JSON.stringify(userData));
+if(localStorage.getItem("test@example.com") == null){
+  //account 1
+  var userData = {'password': 'pass', "name": "John Smith", "age":"50", 'knee':'true', 'back':'false','wrist':'false'};
+  var curremail = "test@example.com";
+  localStorage.setItem(curremail, JSON.stringify(userData));
+}
 
+if(localStorage.getItem("back@injury.com") == null){
 //account 2
-var userData = {'password': 'word', "name": "Jeff Lee", "age":"55",'knee':'false', 'back':'true','wrist':'false'};
-var curremail = "back@injury.com";
-localStorage.setItem(curremail, JSON.stringify(userData));
-
+  var userData = {'password': 'word', "name": "Jeff Lee", "age":"55",'knee':'false', 'back':'true','wrist':'false'};
+  var curremail = "back@injury.com";
+  localStorage.setItem(curremail, JSON.stringify(userData));
+}
 window.onload = function(){
 $('#exerciseInfoModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
