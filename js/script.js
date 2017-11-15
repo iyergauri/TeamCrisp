@@ -30,6 +30,24 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
   if(exercise == "Walk"){
     modal.find('#modal-text').text("Walk at a brisk pace in an open area for 10 minutes");
   }
+  if(exercise == "Situp"){
+    modal.find('#modal-text').text("Lay flat on your back with your knees bent. Put your"+
+                                   " arms across your chest and lift your upper body until"+
+                                   " your elbows touch your knees and then lay back so that"+
+                                   " your back is on the ground again. Repeat this 10 times.");
+  }
+  if(exercise == "Pushup"){
+    modal.find('#modal-text').text("Stand an arms length away from a sturdy wall. Keeping your feet planted,"+
+                                    " bend your arms so your body moves closer to the wall, then push agaisnt"+
+                                    " the wall so your are standing up straight again. Repeat this 10 times.");
+  }
+  if(exercise == "Wallsit"){
+    modal.find('#modal-text').text("Put your back against a wall. Lower your body by bending your knees as if you were sitting in a chair. Hold this position for 30 seconds.");
+  }
+  if(exercise == "Calfraise"){
+    modal.find('#modal-text').text("Stand with your feet flat on the ground. lift your heels until you are are"+
+                                  " your tip-toes and hold for one second and then return to a normal standing position. Repeat this 10 times.");
+  }
 })
 };
 
