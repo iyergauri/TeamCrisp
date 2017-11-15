@@ -51,9 +51,9 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
 })
 };
 
-function timer() {
+function timer(obj) {
     $("#walk").attr("disabled", true);
-    document.getElementById("timeCount").innerHTML = "10:00 left";
+    obj.innerHTML = "10:00 left";
     var timeleft = 600;
     var minutes = Math.floor(timeleft/60);
     var seconds = timeleft - minutes*60;
@@ -63,25 +63,25 @@ function timer() {
     seconds = timeleft - minutes*60;
     if(seconds < 10)
       seconds = "0"+seconds;
-    document.getElementById("timeCount").textContent = minutes + ":" + seconds + " left";
+    obj.textContent = minutes + ":" + seconds + " left";
     if(timeleft <= 0){
       clearInterval(downloadTimer);
-      document.getElementById("numCount").textContent = "DONE!";
+      obj.textContent = "DONE!";
     }
     },1000);
 }
-function counter() {
+function counter(obj) {
     $("#squat").attr("disabled", true);
-    document.getElementById("numCount").innerHTML = "10 left";
+    obj.innerHTML = "10 left";
     var timeleft = 10;
     var imgNum = 0;
     var downloadTimer = setInterval(function(){
       timeleft--;
-      document.getElementById("numCount").textContent = timeleft + " left";
+      obj.textContent = timeleft + " left";
 
       if(timeleft <= 0){
         clearInterval(downloadTimer);
-        document.getElementById("numCount").textContent = "DONE!";
+        obj.textContent = "DONE!";
       }
     },2000);
 
