@@ -48,15 +48,15 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
     modal.find('#modal-text').text("Stand with your feet flat on the ground. lift your heels until you are are"+
                                   " your tip-toes and hold for one second and then return to a normal standing position. Repeat this 10 times.");
   }
-})
+});
 };
 
 function timer(obj,time) {
     $(obj).attr("disabled", true);
-    obj.innerHTML = "10:00 left";
-    var timeleft =time;
+    var timeleft = time;
     var minutes = Math.floor(timeleft/60);
     var seconds = timeleft - minutes*60;
+    obj.innerHTML = minutes + ":" + seconds + " left";
     var downloadTimer = setInterval(function(){
     timeleft--;
     minutes = Math.floor(timeleft/60);
@@ -84,8 +84,9 @@ function counter(obj) {
         obj.textContent = "DONE!";
       }
     },2000);
-/*
-if(this.id = "squat"){
+
+if(this.id == "squat"){
+
     var switchImg = setInterval(function(){
       if(timeleft <= 0)
         document.getElementById("exercise-img2").src = "./img/Squat1.png";
@@ -97,7 +98,7 @@ if(this.id = "squat"){
       imgNum++;
     },1000);
   }
-  */
+
 }
 
 function checkLogin(){
