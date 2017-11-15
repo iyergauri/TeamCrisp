@@ -88,11 +88,11 @@ function counter(obj) {
 if(this.id = "squat"){
     var switchImg = setInterval(function(){
       if(timeleft <= 0)
-        document.getElementById("squat-img").src = "./img/Squat1.png";
+        document.getElementById("exercise-img2").src = "./img/Squat1.png";
       else if(imgNum % 2 == 0)
-        document.getElementById("squat-img").src = "./img/Squat1.png";
+        document.getElementById("exercise-img2").src = "./img/Squat1.png";
       else 
-        document.getElementById("squat-img").src = "./img/Squat2.png";
+        document.getElementById("exercise-img2").src = "./img/Squat2.png";
       
       imgNum++;
     },1000);
