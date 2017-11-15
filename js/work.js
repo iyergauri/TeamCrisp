@@ -1,12 +1,13 @@
 	
 var email = localStorage.getItem('currentUser');
 var user = JSON.parse(localStorage.getItem(email));
+
 window.onload = function(){
 	if(user.knee == "true"){
 		document.getElementById("exercise-name2").innerHTML="TOE RAISE";
 		document.getElementById("exercise-amt2").innerHTML="10 TOE RAISES";
 		document.getElementById("exercise-pic2").src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Fidget_spinner_red%2C_cropped.jpg";
-
+	}
 	if(user.back == "true"){
 		document.getElementById("exercise-name2").innerHTML="WALL SIT";
 		document.getElementById("exercise-amt2").innerHTML="30 Seconds";
