@@ -3,9 +3,9 @@
     <head> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="import" href="components.html">
-
-  <title>Sign Up</title>
+    <title>Sign Up</title>
   </head>
+
   <body>
     <div class="container">
       <div class="col">
@@ -15,9 +15,19 @@
             <hr/>
           </div>
         </div> 
+        
+
+        <!-- SIGNUP FORM-->
         <div>
           <form method="get" action="javascript:createAccount();">
+           
+            <!-- RETURNING USER -->
+            <label>Already have an account? Just login!</label>
+            <div>
+              <a class="btn btn-success btn-lg" href="./login.html" role="button">I Already Have an Account</a>
+            </div>
             
+            <!-- NEW USER -->
             <div class="form-group">
               <label for="name">Name</label>
                 <div class="input-group">
@@ -44,29 +54,27 @@
                   <input type="password" class="form-control" name="password" id="password"  placeholder="Create a Password" required/>
                 </div>     
             </div>
-            
+           
+            <!-- INJURIES -->
             <div>
             <h3>Modifications</h3>
-              <label> Select all that Apply:</label>
+              <label> Select any injuries or sensitive body parts so that we can cater your workout around them:</label>
             </div>
            
-        <label class="btn btn-info">
-          <input type="checkbox" id="knee" autocomplete="off"> Knee
-        </label>
-        <label class="btn btn-info">
-          <input type="checkbox" id="back" autocomplete="off"> Back
-        </label>
-        <label class="btn btn-info">
-          <input type="checkbox" id="wrist" autocomplete="off"> Wrist
-        </label>
+            <label class="btn btn-info">
+              <input type="checkbox" id="knee" autocomplete="off"> Knee
+            </label>
+            <label class="btn btn-info">
+              <input type="checkbox" id="back" autocomplete="off"> Back
+            </label>
+            <label class="btn btn-info">
+              <input type="checkbox" id="wrist" autocomplete="off"> Wrist
+            </label>
 
 
+            <!-- SUBMIT -->
             <div>
               <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Sign Up">
-            </div>
-            <label>Already have an account?</label>
-            <div>
-                    <a href="login.html">Login</a>
             </div>
           </form>
 
