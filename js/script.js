@@ -85,6 +85,7 @@ function counter(obj) {
       }
     },2000);
 
+if(this.id = "squat"){
     var switchImg = setInterval(function(){
       if(timeleft <= 0)
         document.getElementById("squat-img").src = "./img/Squat1.png";
@@ -95,6 +96,7 @@ function counter(obj) {
       
       imgNum++;
     },1000);
+  }
 }
 
 function checkLogin(){
