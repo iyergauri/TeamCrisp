@@ -12,6 +12,7 @@ window.onload = function(){
 		document.getElementById("exercise-name2").innerHTML="Wall Sit";
 		document.getElementById("exercise-amt2").innerHTML="30 Seconds";
 		document.getElementById("exercise-img2").src="./img/wallsit.jpg";
+		document.getElementById("squat").id="wallsit-btn";
 	}
 	if(user.wrist == "true"){	
 		document.getElementById("exercise-name3").innerHTML="Sit Ups";
