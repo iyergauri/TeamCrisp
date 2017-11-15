@@ -53,10 +53,10 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
 
 function timer(obj,time) {
     $(obj).attr("disabled", true);
-    obj.innerHTML = "10:00 left";
-    var timeleft =time;
+    var timeleft = time;
     var minutes = Math.floor(timeleft/60);
     var seconds = timeleft - minutes*60;
+    obj.innerHTML = minutes + ":" + seconds + " left";
     var downloadTimer = setInterval(function(){
     timeleft--;
     minutes = Math.floor(timeleft/60);
@@ -85,7 +85,7 @@ function counter(obj) {
       }
     },2000);
 
-if(this.id = "squat"){
+if(this.id == "squat"){
     var switchImg = setInterval(function(){
       if(timeleft <= 0)
         document.getElementById("exercise-img2").src = "./img/Squat1.png";
