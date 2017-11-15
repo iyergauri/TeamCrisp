@@ -4,7 +4,7 @@ window.onload = function(){
     email = localStorage.getItem('currentUser');
     user = JSON.parse(localStorage.getItem(email));
     calendar = document.getElementById('calendar');
-    if (user.knee == "true") {
+    if (user.wrist == "true") {
         calendar.rows[1].cells[0].innerHTML = 'No Workout Today!';
         calendar.rows[1].cells[2].innerHTML = 'No Workout Today!';
         if(user.back == "true") {
