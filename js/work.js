@@ -1,6 +1,8 @@
 	
 var email = localStorage.getItem('currentUser');
 var user = JSON.parse(localStorage.getItem(email));
+var date = new Date();
+var day = date.getDay();
 
 window.onload = function(){
 	if(user.knee == "true"){
@@ -18,5 +20,12 @@ window.onload = function(){
 		document.getElementById("exercise-name3").innerHTML="Sit Ups";
 		document.getElementById("exercise-amt3").innerHTML="10 Times";
 		document.getElementById("exercise-img3").src="./img/situp.png";
-	}		
+	}
+	if(day % 2 == 0){
+		document.getElementById("exer1").style.visibility="hidden";
+		document.getElementById("exer2").style.visibility="hidden";
+	}
+	if(day % 2 == 1 || day == 6){
+		document.getElementById("exer3").style.visibility="hidden";
+	}
 };
