@@ -48,7 +48,7 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
     modal.find('#modal-text').text("Stand with your feet flat on the ground. lift your heels until you are are"+
                                   " your tip-toes and hold for one second and then return to a normal standing position. Repeat this 10 times.");
   }
-})
+});
 };
 
 function timer(obj,time) {
