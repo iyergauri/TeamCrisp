@@ -7,10 +7,9 @@ window.onload = function(){
     if (user.knee == "true") {
         calendar.rows[1].cells[0].innerHTML = 'No Workout Today!';
         calendar.rows[1].cells[2].innerHTML = 'No Workout Today!';
-        if(user.back == true) {
+        if(user.back == "true") {
             calendar.rows[1].cells[4].innerHTML = 'No Workout Today!';
-        }
-        else {
+        } else {
             calendar.rows[1].cells[4].innerHTML = 'Squats';
             calendar.rows[2].cells[4].innerHTML = '';
         }
