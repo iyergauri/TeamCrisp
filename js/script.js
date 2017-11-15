@@ -1,15 +1,18 @@
 
 //insecure but using just for fake info and testing
-//account 1
-var userData = {'password': 'pass', "name": "John Smith", "age":"50", 'knee':'true', 'back':'false','wrist':'false'};
-var curremail = "test@example.com";
-localStorage.setItem(curremail, JSON.stringify(userData));
+if(localStorage.getItem("test@example.com") == null){
+  //account 1
+  var userData = {'password': 'pass', "name": "John Smith", "age":"50", 'knee':'true', 'back':'false','wrist':'false'};
+  var curremail = "test@example.com";
+  localStorage.setItem(curremail, JSON.stringify(userData));
+}
 
+if(localStorage.getItem("back@injury.com") == null){
 //account 2
-var userData = {'password': 'word', "name": "Jeff Lee", "age":"55",'knee':'false', 'back':'true','wrist':'false'};
-var curremail = "back@injury.com";
-localStorage.setItem(curremail, JSON.stringify(userData));
-
+  var userData = {'password': 'word', "name": "Jeff Lee", "age":"55",'knee':'false', 'back':'true','wrist':'false'};
+  var curremail = "back@injury.com";
+  localStorage.setItem(curremail, JSON.stringify(userData));
+}
 window.onload = function(){
 $('#exerciseInfoModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
@@ -27,13 +30,31 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
   if(exercise == "Walk"){
     modal.find('#modal-text').text("Walk at a brisk pace in an open area for 10 minutes");
   }
+  if(exercise == "Situp"){
+    modal.find('#modal-text').text("Lay flat on your back with your knees bent. Put your"+
+                                   " arms across your chest and lift your upper body until"+
+                                   " your elbows touch your knees and then lay back so that"+
+                                   " your back is on the ground again. Repeat this 10 times.");
+  }
+  if(exercise == "Pushup"){
+    modal.find('#modal-text').text("Stand an arms length away from a sturdy wall. Keeping your feet planted,"+
+                                    " bend your arms so your body moves closer to the wall, then push agaisnt"+
+                                    " the wall so your are standing up straight again. Repeat this 10 times.");
+  }
+  if(exercise == "Wallsit"){
+    modal.find('#modal-text').text("Put your back against a wall. Lower your body by bending your knees as if you were sitting in a chair. Hold this position for 30 seconds.");
+  }
+  if(exercise == "Calfraise"){
+    modal.find('#modal-text').text("Stand with your feet flat on the ground. lift your heels until you are are"+
+                                  " your tip-toes and hold for one second and then return to a normal standing position. Repeat this 10 times.");
+  }
 })
 };
 
-function timer() {
-    $("#walk").attr("disabled", true);
-    document.getElementById("timeCount").innerHTML = "10:00 left";
-    var timeleft = 600;
+function timer(obj,time) {
+    $(obj).attr("disabled", true);
+    obj.innerHTML = "10:00 left";
+    var timeleft =time;
     var minutes = Math.floor(timeleft/60);
     var seconds = timeleft - minutes*60;
     var downloadTimer = setInterval(function(){
@@ -42,38 +63,41 @@ function timer() {
     seconds = timeleft - minutes*60;
     if(seconds < 10)
       seconds = "0"+seconds;
-    document.getElementById("timeCount").textContent = minutes + ":" + seconds + " left";
+    obj.textContent = minutes + ":" + seconds + " left";
     if(timeleft <= 0){
       clearInterval(downloadTimer);
-      document.getElementById("numCount").textContent = "DONE!";
+      obj.textContent = "DONE!";
     }
     },1000);
 }
-function counter() {
-    $("#squat").attr("disabled", true);
-    document.getElementById("numCount").innerHTML = "10 left";
+function counter(obj) {
+    $(obj).attr("disabled", true);
+    obj.innerHTML = "10 left";
     var timeleft = 10;
     var imgNum = 0;
     var downloadTimer = setInterval(function(){
       timeleft--;
-      document.getElementById("numCount").textContent = timeleft + " left";
+      obj.textContent = timeleft + " left";
 
       if(timeleft <= 0){
         clearInterval(downloadTimer);
-        document.getElementById("numCount").textContent = "DONE!";
+        obj.textContent = "DONE!";
       }
     },2000);
-
+/*
+if(this.id = "squat"){
     var switchImg = setInterval(function(){
       if(timeleft <= 0)
-        document.getElementById("squat-img").src = "./img/Squat1.png";
+        document.getElementById("exercise-img2").src = "./img/Squat1.png";
       else if(imgNum % 2 == 0)
-        document.getElementById("squat-img").src = "./img/Squat1.png";
+        document.getElementById("exercise-img2").src = "./img/Squat1.png";
       else 
-        document.getElementById("squat-img").src = "./img/Squat2.png";
+        document.getElementById("exercise-img2").src = "./img/Squat2.png";
       
       imgNum++;
     },1000);
+  }
+  */
 }
 
 function checkLogin(){
