@@ -84,7 +84,7 @@ function counter(obj) {
         obj.textContent = "DONE!";
       }
     },2000);
-
+/*
 if(this.id = "squat"){
     var switchImg = setInterval(function(){
       if(timeleft <= 0)
@@ -97,6 +97,7 @@ if(this.id = "squat"){
       imgNum++;
     },1000);
   }
+  */
 }
 
 function checkLogin(){
