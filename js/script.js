@@ -51,10 +51,10 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
 })
 };
 
-function timer(obj) {
-    $("#walk").attr("disabled", true);
+function timer(obj,time) {
+    $(obj).attr("disabled", true);
     obj.innerHTML = "10:00 left";
-    var timeleft = 600;
+    var timeleft =time;
     var minutes = Math.floor(timeleft/60);
     var seconds = timeleft - minutes*60;
     var downloadTimer = setInterval(function(){
@@ -71,7 +71,7 @@ function timer(obj) {
     },1000);
 }
 function counter(obj) {
-    $("#squat").attr("disabled", true);
+    $(obj).attr("disabled", true);
     obj.innerHTML = "10 left";
     var timeleft = 10;
     var imgNum = 0;
