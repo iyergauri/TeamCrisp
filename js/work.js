@@ -17,4 +17,5 @@ window.onload = function(){
 		document.getElementById("exercise-name3").innerHTML="Sit Ups";
 		document.getElementById("exercise-amt3").innerHTML="10 Times";
 		document.getElementById("exercise-img3").src="./img/situp.jpg";
+	}		
 };
