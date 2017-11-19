@@ -1,3 +1,7 @@
+/** File: script.js
+  * Authors: Connor Schultz, Yiming Andy Zhang, Gauri Iyer
+  */
+
 
 //insecure but using just for fake info and testing
 if(localStorage.getItem("test@example.com") == null){
@@ -13,6 +17,8 @@ if(localStorage.getItem("back@injury.com") == null){
   var curremail = "back@injury.com";
   localStorage.setItem(curremail, JSON.stringify(userData));
 }
+
+/* LOAD EXERCISE MODALS (disabled) *********
 window.onload = function(){
 $('#exerciseInfoModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
@@ -49,7 +55,13 @@ $('#exerciseInfoModal').on('show.bs.modal', function (event) {
                                   " your tip-toes and hold for one second and then return to a normal standing position. Repeat this 10 times.");
   }
 });
-};
+}; 
+*/
+
+// enables Bootstrap popovers for document
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
 
 function timer(obj,time) {
     $(obj).attr("disabled", true);
