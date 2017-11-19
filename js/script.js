@@ -22,7 +22,7 @@ if(localStorage.getItem("back@injury.com") == null){
 $('exercise-info1').on('click', function(){
   $this.attr('data-content', 'Dynamically changed text!');
   $this.popover('show');
-};
+});
 
 /* testing popover stuff
 window.onload = function(){
