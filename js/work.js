@@ -13,8 +13,6 @@ $("#exercise-info3-mod").hide();
 		document.getElementById("exercise-img1").src="./img/calfraise.jpg";
 		document.getElementById("walk").id="calf-raise-btn";
 		document.getElementById("calf-raise-btn").onclick="counter(this)";
-    document.getElementById("popover-walk").hide();
-    document.getElementById("popover-calfraise").show();
     $("#exercise-info1").hide();
     $("#exercise-info1-mod").show();
 
