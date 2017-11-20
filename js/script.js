@@ -26,10 +26,20 @@ $(document).ready(function(){
 
 /* testing popover stuff */
 window.onload = function(){
+  // attempt #1: using same method as modal
   $('#exercise-info1').on('show.bs.popover', function (event) {
-    $(this).popover(content) = 'content from using $this';
+    $(this).popover(content) = 'attempt #1';
   });
-  $("#exercise-info1").popover({content: "content from using .popover",});
+
+  // attempt #2: using .popover()
+  $("#exercise-info1").popover({content: "attempt #2",});
+  
+  // attempt #3: using attribute
+  $(this).attr('data-content','attempt #3');
+
+  $(this).popover('show');
+
+  // attempt #4: 
 };
 /*
 $('#exerciseInfoPopover').on('show.bs.popover', function (event) {
