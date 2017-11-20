@@ -30,8 +30,6 @@ $("#exercise-info3-mod").hide();
 		document.getElementById("exercise-name3").innerHTML="Sit Ups";
 		document.getElementById("exercise-amt3").innerHTML="10 Times";
 		document.getElementById("exercise-img3").src="./img/situp.png";
-    document.getElementById("exercise-info3").popover(content)="Stand with your feet flat, then lift your heels until you are" +
-      "on your tip-toes, hold for one second, and return to normal standing position. Repeat this 10 times.";
     $("#exercise-info3").hide();
     $("#exercise-info3-mod").show();
 	}
