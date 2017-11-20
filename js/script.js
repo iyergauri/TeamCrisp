@@ -30,7 +30,7 @@ window.onload = function(){
     $(this).popover(content) = 'content from using $this';
   });
   $("#exercise-info1").popover({content: "content from using .popover",});
-});
+};
 /*
 $('#exerciseInfoPopover').on('show.bs.popover', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
