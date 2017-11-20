@@ -10,9 +10,11 @@ window.onload = function(){
 		document.getElementById("exercise-img1").src="./img/calfraise.jpg";
 		document.getElementById("walk").id="calf-raise-btn";
 		document.getElementById("calf-raise-btn").onclick="counter(this)";
+    document.getElementById("popover-walk").hide();
+    document.getElementById("popover-calfraise").show();
     //document.getElementById("exercise-info1").popover({content: "Stand with your feet flat, then lift your heels until you are" +
       //"on your tip-toes, hold for one second, and return to normal standing position. Repeat this 10 times.",});
-    $("#exercise-info1").popover({content: "Calf Raises content",});
+    //$("#exercise-info1").popover({content: "Calf Raises content",});
 
 	} 
 	if(user.back == "true"){
