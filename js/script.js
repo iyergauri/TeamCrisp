@@ -23,13 +23,15 @@ $(document).ready(function(){
     $('[data-toggle="popover"]').popover();
 });
 
-/* ENABLE POPOVERS 
-$('#exercise-info1').on('show.bs.popover', function (event) {
-    $(this).popover(content) = 'New Content';
-}); */
 
-/* testing popover stuff
+/* testing popover stuff */
 window.onload = function(){
+  $('#exercise-info1').on('show.bs.popover', function (event) {
+    $(this).popover(content) = 'content from using $this';
+  });
+  $("#exercise-info1").popover({content: "content from using .popover",});
+});
+/*
 $('#exerciseInfoPopover').on('show.bs.popover', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
   var exercise = button.data('exercise') // Extract info from data-* attributes
