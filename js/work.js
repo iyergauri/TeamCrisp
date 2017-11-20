@@ -4,6 +4,9 @@ var date = new Date();
 var day = date.getDay();
 
 window.onload = function(){
+$("#exercise-info1-mod").hide();
+$("#exercise-info2-mod").hide();
+$("#exercise-info3-mod").hide();
 	if(user.knee == "true"){
 		document.getElementById("exercise-name1").innerHTML="Calf Raise";
 		document.getElementById("exercise-amt1").innerHTML="10 Times";
@@ -12,7 +15,7 @@ window.onload = function(){
 		document.getElementById("calf-raise-btn").onclick="counter(this)";
     document.getElementById("popover-walk").hide();
     document.getElementById("popover-calfraise").show();
-    $("#exercise-info1").hide()
+    $("#exercise-info1").hide();
     $("#exercise-info1-mod").show();
 
 	} 
@@ -22,7 +25,7 @@ window.onload = function(){
 		document.getElementById("exercise-img2").src="./img/wallsit.jpg";
 		document.getElementById("squat").id="wall-sit-btn";
 		document.getElementById("wall-sit-btn").onclick="timer(this, 30)";
-    $("#exercise-info2").hide()
+    $("#exercise-info2").hide();
     $("#exercise-info2-mod").show();
 	}
 	if(user.wrist == "true"){	
@@ -31,7 +34,7 @@ window.onload = function(){
 		document.getElementById("exercise-img3").src="./img/situp.png";
     document.getElementById("exercise-info3").popover(content)="Stand with your feet flat, then lift your heels until you are" +
       "on your tip-toes, hold for one second, and return to normal standing position. Repeat this 10 times.";
-    $("#exercise-info3").hide()
+    $("#exercise-info3").hide();
     $("#exercise-info3-mod").show();
 	}
 	
