@@ -49,17 +49,23 @@ Project: Workout app to assist the aging/elderly with maintaining consistent sch
       </p>
     </div>
 
-    <!-- exercise 1 -->
+    <!-- NEW LAYOUT: GRID; each column is one exercise -->
     <div class="container">
-      <div class="container text center" id="exer1">
-        <div class="col">
+      
+      <!-- exercise 1 -->
+      <div class="col">  
+        <div class="container text center" id="exer1">
 
-          <!-- EXERCISE INFO -->
+          <!-- EXERCISE IMG -->
           <div class="row">
             <img id="exercise-img1" src="./img/Walk.png" class="img-rounded" alt="Lights" style="height:15%" style="width:15%">
+          </div>
+
+          <!-- INFO BUTTONS -->
+          <div class="row">
             <button id="exercise-info1" type="button" class="btn btn-warning" data-container="body" 
-              data-toggle="popover" data-placement="top" 
-              data-content="Walk at a brisk pace while pumping your arms.">
+                data-toggle="popover" data-placement="top" 
+                data-content="Walk at a brisk pace while pumping your arms.">
               Click to toggle info
             </button>
 
@@ -72,11 +78,15 @@ Project: Workout app to assist the aging/elderly with maintaining consistent sch
             </button>
           </div>
 
+          <!-- NAME & AMOUNT -->
           <div class="row">
             <h1 class="display-3" id="exercise-name1">Walk</h1>
+          </div>
+          <div class="row">
             <h2 class="display-3" id="exercise-amt1">10 Minutes</h2>
           </div>
 
+          <!-- START BUTTON -->
           <div class="row">
             <p text-align="center">
             <br/>
@@ -90,73 +100,87 @@ Project: Workout app to assist the aging/elderly with maintaining consistent sch
 
 
       <!-- exercise 2 -->
-      <div class="container text center" id="exer2">
-        <div class="col">
+      <div class="col">
+        <div class="container text center" id="exer2">
+          <!-- EXERCISE IMG -->
           <div class="row">
-              <img id="exercise-img2" src="./img/Squat2.png" class="img-rounded" alt="Lights" style="height:15%" style="width:15%">
-              <button id="exercise-info2" type="button" class="btn btn-warning" data-container="body"
-                    data-toggle="popover" data-placement="top"
-                    data-content="Stand with your arms straight out and with your feet at about shoulder width apart. 
-                    Keeping your back straight, bend your knees as if you were sitting. 
-                    Rise back up to a standing position. 
-                    Repeat this 10 times.">
-                  Click to toggle info
-              </button>
-              <button id="exercise-info2-mod" type="button" class="btn btn-warning" data-container="body"
-                  data-toggle="popover" data-placement="top"
-                  data-content="Put your back against a wall. Lower your body by bending
-                  your knees as if you were sitting in a chair. Hold this position for 30 seconds.">
-                Click to toggle info
-              </button>
-
-            </div>
-
-            <div class="row">
-              <h1 class="display-3" id="exercise-name2">Squats</h1>
-              <h2 class="display-3" id="exercise-amt2">10 Squats</h2>
-            </div>
-
-            <div class="row">
-              <p class="lead">
-              <br />
-              <button type="button" id="squat" onclick="counter(this)" class="btn btn-primary btn-circle btn-lg">
-                <h2 id="numCount">Start Now<br/></h2></button>
-              </p>
-            </div>
-
+            <img id="exercise-img2" src="./img/Squat2.png" class="img-rounded" alt="Lights" style="height:15%" style="width:15%">
           </div>
+
+          <!-- INFO BUTTONS -->
+          <div class="row">
+            <button id="exercise-info2" type="button" class="btn btn-warning" data-container="body"
+                data-toggle="popover" data-placement="top"
+                data-content="Stand with your arms straight out and with your feet at about shoulder width apart. 
+                Keeping your back straight, bend your knees as if you were sitting. 
+                Rise back up to a standing position. 
+                Repeat this 10 times.">
+              Click to toggle info
+            </button>
+
+            <button id="exercise-info2-mod" type="button" class="btn btn-warning" data-container="body"
+                data-toggle="popover" data-placement="top"
+                data-content="Put your back against a wall. Lower your body by bending
+                your knees as if you were sitting in a chair. Hold this position for 30 seconds.">
+              Click to toggle info
+            </button>
+          </div>
+
+          <!-- NAME & AMOUNT -->
+          <div class="row">
+            <h1 class="display-3" id="exercise-name2">Squats</h1>
+          </div>
+          <div class="row">
+            <h2 class="display-3" id="exercise-amt2">10 Squats</h2>
+          </div>
+          
+          <!-- START BUTTON -->
+          <div class="row">
+            <p class="lead">
+            <br />
+            <button type="button" id="squat" onclick="counter(this)" class="btn btn-primary btn-circle btn-lg">
+              <h2 id="numCount">Start Now<br/></h2></button>
+            </p>
+          </div>
+
         </div>
+      </div>
 
 
         <!-- exercise 3 -->
-        <div class="container text center" id="exer3">
-          <div class="col">
+        <div class="col">
 
+          <div class="container text center" id="exer3">
             <div class="row">
               <img id="exercise-img3" src="./img/pushup.jpg" class="img-rounded" alt="Lights" style="height:15%" style="width:15%">
+
+            </div>
+            <div class="row">
               <!--default-->
               <button id="exercise-info3" type="button" class="btn btn-warning" data-container="body" 
-                   data-toggle="popover" data-placement="top" 
-                   data-content="Stand an arms length away from a sturdy wall. Keeping your feet planted,"+
-                   " bend your arms so your body moves closer to the wall, then push against"+
-                   " the wall so you are standing up straight again. Repeat this 10 times.">
+                  data-toggle="popover" data-placement="top" 
+                  data-content="Stand an arms length away from a sturdy wall. Keeping your feet planted,"+
+                  " bend your arms so your body moves closer to the wall, then push against"+
+                  " the wall so you are standing up straight again. Repeat this 10 times.">
                 Click to toggle info 
               </button>
 
               <!--with modification-->
               <button id="exercise-info3-mod" type="button" class="btn btn-warning" data-container="body" 
-                   data-toggle="popover" data-placement="top" 
-                   data-content="Lay flat on your back with your knees bent.
-                   Put your arms across your chest and lift your
-                   upper body until your elbows touch your knees
-                   and then lay back so that your back is on the
-                   ground again. Repeat this 10 times.">
+                  data-toggle="popover" data-placement="top" 
+                  data-content="Lay flat on your back with your knees bent.
+                  Put your arms across your chest and lift your
+                  upper body until your elbows touch your knees
+                  and then lay back so that your back is on the
+                  ground again. Repeat this 10 times.">
                 Click to toggle info 
               </button>
             </div>
 
             <div class="row">
               <h1 class="display-3" id="exercise-name3">Wall Push Ups</h1>
+            </div>
+            <div class="row">
               <h2 class="display-3" id="exercise-amt3">10 Pushups</h2>
             </div>
 
