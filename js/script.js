@@ -24,8 +24,9 @@ $(document).ready(function(){
 });
 
 /* ENABLE POPOVERS */
-$('#exercise-info1').data('bs.popover').options.content = 'New Content';
-
+$('#exercise-info1').on('show.bs.popover', function (event) {
+    $(this).popover(content) = 'New Content';
+});
 
 /* testing popover stuff
 window.onload = function(){
