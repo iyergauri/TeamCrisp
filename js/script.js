@@ -18,11 +18,14 @@ if(localStorage.getItem("back@injury.com") == null){
   localStorage.setItem(curremail, JSON.stringify(userData));
 }
 
-/* LOAD EXERCISE POPVERS */ 
-$('exercise-info1').on('click', function(){
-  $this.attr('data-content', 'Dynamically changed text!');
-  $this.popover('show');
+/* LOAD EXERCISE POPOVERS */ 
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
 });
+
+/* ENABLE POPOVERS */
+$('#exercise-info1').data('bs.popover').options.content = 'New Content';
+
 
 /* testing popover stuff
 window.onload = function(){
