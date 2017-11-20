@@ -10,7 +10,11 @@ window.onload = function(){
 		document.getElementById("exercise-img1").src="./img/calfraise.jpg";
 		document.getElementById("walk").id="calf-raise-btn";
 		document.getElementById("calf-raise-btn").onclick="counter(this)";
-	}
+    document.getElementById("exercise-info1).popover(content)="HELLO!";
+	} 
+  else {
+    document.getElementById("exercise-info1).popover(content)="GOODBYE~";
+  }
 	if(user.back == "true"){
 		document.getElementById("exercise-name2").innerHTML="Wall Sit";
 		document.getElementById("exercise-amt2").innerHTML="30 Seconds";
