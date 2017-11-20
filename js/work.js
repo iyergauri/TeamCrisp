@@ -10,22 +10,24 @@ window.onload = function(){
 		document.getElementById("exercise-img1").src="./img/calfraise.jpg";
 		document.getElementById("walk").id="calf-raise-btn";
 		document.getElementById("calf-raise-btn").onclick="counter(this)";
-    document.getElementById("exercise-info1").popover(content)="HELLO!";
+    document.getElementById("exercise-info1").popover(content)="Stand with your feet flat, then lift your heels until you are" +
+      "on your tip-toes, hold for one second, and return to normal standing position. Repeat this 10 times.";
 	} 
-  else {
-    document.getElementById("exercise-info1").popover(content)="GOODBYE~";
-  }
 	if(user.back == "true"){
 		document.getElementById("exercise-name2").innerHTML="Wall Sit";
 		document.getElementById("exercise-amt2").innerHTML="30 Seconds";
 		document.getElementById("exercise-img2").src="./img/wallsit.jpg";
 		document.getElementById("squat").id="wall-sit-btn";
 		document.getElementById("wall-sit-btn").onclick="timer(this, 30)";
+    document.getElementById("exercise-info2").popover(content)="Stand with your feet flat, then lift your heels until you are" +
+      "on your tip-toes, hold for one second, and return to normal standing position. Repeat this 10 times.";
 	}
 	if(user.wrist == "true"){	
 		document.getElementById("exercise-name3").innerHTML="Sit Ups";
 		document.getElementById("exercise-amt3").innerHTML="10 Times";
 		document.getElementById("exercise-img3").src="./img/situp.png";
+    document.getElementById("exercise-info3").popover(content)="Stand with your feet flat, then lift your heels until you are" +
+      "on your tip-toes, hold for one second, and return to normal standing position. Repeat this 10 times.";
 	}
 	
 	
