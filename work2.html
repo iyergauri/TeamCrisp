@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--Authors: Connor Schultz, Gauri Iyer, Andy Zhang
+Class: CSE 170, Fall 2017
+Project: Workout app to assist the aging/elderly with maintaining consistent schedule -->
+
+<!--HEAD-->
+<html lang="en">
+  <head>
+    <title>Team Crisp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="import" href="components.html">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/work.js"></script>
+  </head>
+
+
+  <body>
+    <!--NAVIGATION BAR
+      sources of help: 
+      www.w3schools.com/bootstrap/bootstrap_navbar.asp 
+      https://stackoverflow.com/questions/19733447/bootstrap-navbar-with-left-center-and-right-aligned-items
+    --> 
+    <nav class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <!--a class="navbar-brand" href="#">Workout App</a-->
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <!--li><a href="#home">Home</a></li>
+            <li><a href="#other">Other</a></li-->
+            <li><a href="settings.html">Account Settings</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="signup.html">Log Out</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- HOME PAGE BANNER -->
+    <div class="jumbotron text-center">
+      <h1 class="display-3">Today's Workout</h1>
+      <p class="lead">
+      <a class="btn btn-success btn-lg" href="./index.html" role="button">Return Home</a>
+      </p>
+    </div>
+
+    <!-- exercise 1 -->
+    <div class="container">
+      <div class="container text center" id="exer1">
+        <div class="col">
+
+          <!-- EXERCISE INFO -->
+          <div class="row">
+            <img id="exercise-img1" src="./img/Walk.png" class="img-rounded" alt="Lights" style="height:15%" style="width:15%">
+            <button id="exercise-info1" type="button" class="btn btn-warning" data-container="body" 
+              data-toggle="popover" data-placement="top" 
+              data-content="Walk at a brisk pace while pumping your arms.">
+              Click to toggle info
+            </button>
+
+            <button id="exercise-info1-mod" type="button" class="btn btn-warning" data-container="body" 
+                data-toggle="popover" data-placement="top" 
+                data-content="Stand with your feet flat on the ground. lift your heels until you are
+                are your tip-toes and hold for one second and then return to a normal
+                standing position. Repeat this 10 times.">
+              Click to toggle info
+            </button>
+          </div>
+
+          <div class="row">
+            <h1 class="display-3" id="exercise-name1">Walk</h1>
+            <h2 class="display-3" id="exercise-amt1">10 Minutes</h2>
+          </div>
+
+          <div class="row">
+            <p text-align="center">
+            <br/>
+            <button type="button" id="walk" onclick="timer(this,600)" class="btn btn-primary btn-circle btn-lg">
+              <h2 id="timeCount">Start Now<br /></h2></button>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- exercise 2 -->
+      <div class="container text center" id="exer2">
+        <div class="col">
+          <div class="row">
+              <img id="exercise-img2" src="./img/Squat2.png" class="img-rounded" alt="Lights" style="height:15%" style="width:15%">
+              <button id="exercise-info2" type="button" class="btn btn-warning" data-container="body"
+                    data-toggle="popover" data-placement="top"
+                    data-content="Stand with your arms straight out and with your feet at about shoulder width apart. 
+                    Keeping your back straight, bend your knees as if you were sitting. 
+                    Rise back up to a standing position. 
+                    Repeat this 10 times.">
+                  Click to toggle info
+              </button>
+              <button id="exercise-info2-mod" type="button" class="btn btn-warning" data-container="body"
+                  data-toggle="popover" data-placement="top"
+                  data-content="Put your back against a wall. Lower your body by bending
+                  your knees as if you were sitting in a chair. Hold this position for 30 seconds.">
+                Click to toggle info
+              </button>
+
+            </div>
+
+            <div class="row">
+              <h1 class="display-3" id="exercise-name2">Squats</h1>
+              <h2 class="display-3" id="exercise-amt2">10 Squats</h2>
+            </div>
+
+            <div class="row">
+              <p class="lead">
+              <br />
+              <button type="button" id="squat" onclick="counter(this)" class="btn btn-primary btn-circle btn-lg">
+                <h2 id="numCount">Start Now<br/></h2></button>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- exercise 3 -->
+        <div class="container text center" id="exer3">
+          <div class="col">
+
+            <div class="row">
+              <img id="exercise-img3" src="./img/pushup.jpg" class="img-rounded" alt="Lights" style="height:15%" style="width:15%">
+              <!--default-->
+              <button id="exercise-info3" type="button" class="btn btn-warning" data-container="body" 
+                   data-toggle="popover" data-placement="top" 
+                   data-content="Stand an arms length away from a sturdy wall. Keeping your feet planted,"+
+                   " bend your arms so your body moves closer to the wall, then push against"+
+                   " the wall so you are standing up straight again. Repeat this 10 times.">
+                Click to toggle info 
+              </button>
+
+              <!--with modification-->
+              <button id="exercise-info3-mod" type="button" class="btn btn-warning" data-container="body" 
+                   data-toggle="popover" data-placement="top" 
+                   data-content="Lay flat on your back with your knees bent.
+                   Put your arms across your chest and lift your
+                   upper body until your elbows touch your knees
+                   and then lay back so that your back is on the
+                   ground again. Repeat this 10 times.">
+                Click to toggle info 
+              </button>
+            </div>
+
+            <div class="row">
+              <h1 class="display-3" id="exercise-name3">Wall Push Ups</h1>
+              <h2 class="display-3" id="exercise-amt3">10 Pushups</h2>
+            </div>
+
+            <div class="row">
+              <p class="lead">
+              <br />
+              <button type="button" id="pushup" onclick="counter(this)" class="btn btn-primary btn-circle btn-lg">
+                <h2 id="numCount">Start Now<br/></h2></button>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg btn-block login-button" onclick="location.href='./finish.html';"> Finish Workout </button>
+    </div>
+    <br>
+
+  </body>
+</html>
