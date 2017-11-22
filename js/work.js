@@ -4,15 +4,18 @@ var date = new Date();
 var day = date.getDay();
 
 window.onload = function(){
-$("#exercise-info1-mod").hide();
-$("#exercise-info2-mod").hide();
-$("#exercise-info3-mod").hide();
+  $("#exercise-info1-mod").hide();
+  $("#exercise-info2-mod").hide();
+  $("#exercise-info3-mod").hide();
+  $("#calfraise-btn").hide();
+  $("#wallsit-btn").hide();
+
 	if(user.knee == "true"){
 		document.getElementById("exercise-name1").innerHTML="Calf Raise";
 		document.getElementById("exercise-amt1").innerHTML="10 Times";
 		document.getElementById("exercise-img1").src="./img/calfraise.jpg";
-		document.getElementById("walk").id="calf-raise-btn";
-		document.getElementById("calf-raise-btn").onclick="counter(this)";
+    $("#walk-btn").hide();
+    $("#calfraise-btn").show();
     $("#exercise-info1").hide();
     $("#exercise-info1-mod").show();
 
@@ -21,8 +24,8 @@ $("#exercise-info3-mod").hide();
 		document.getElementById("exercise-name2").innerHTML="Wall Sit";
 		document.getElementById("exercise-amt2").innerHTML="30 Seconds";
 		document.getElementById("exercise-img2").src="./img/wallsit.jpg";
-		document.getElementById("squat").id="wall-sit-btn";
-		document.getElementById("wall-sit-btn").onclick="timer(this, 30)";
+		$("#squat-btn").hide();
+    $("#wallsit-btn").show();
     $("#exercise-info2").hide();
     $("#exercise-info2-mod").show();
 	}
